@@ -31,7 +31,7 @@ public class IndexController {
 	public String index(ModelMap map,HttpSession session) throws Exception {
 		List<Content> contentList = contentMapper.getContentList();
 		if (contentList.size()!=0) {
-			productList = new ArrayList<>();
+			productList = new ArrayList<Product>();
 			for (Content content : contentList) {
 				productList.add(new Product(
 						content.getId(),

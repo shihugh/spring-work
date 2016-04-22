@@ -30,7 +30,7 @@ public class AccountController {
 	public String account(ModelMap map,HttpSession session) throws IOException {
 		List<Trx> trxList = trxMapper.getTrxList();
 		if (trxList.size()!=0) {
-			buyList = new ArrayList<>();
+			buyList = new ArrayList<Buy>();
 			for (Trx trx : trxList) {
 				buyList.add(new Buy(
 						trx.getContentId(),
